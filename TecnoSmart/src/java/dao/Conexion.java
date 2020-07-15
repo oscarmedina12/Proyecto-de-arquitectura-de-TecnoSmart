@@ -36,7 +36,6 @@ public class Conexion {
             conn.close();
         }
     }
-    
     //este metodo obtiene un statemet a partir de la conexion
     //el statement permite ejecutar sentencias en la base de datos
     public Statement obtenerStatement() throws SQLException{

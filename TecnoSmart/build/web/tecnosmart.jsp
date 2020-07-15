@@ -20,21 +20,20 @@
             %>
         <h3><%= u.getNombre()+" "+u.getApellido() %></h3>
         <%}else{response.sendRedirect("index.jsp?msj=acceso denegado");}%>
-        </h1>
-        <a href="Salir"><input type="button" value="Cerrar Sesion"/></a>
+       
+       
         <menu >
-            <a href="crudProductos.jsp">
-            <menuitem >Productos</menuitem>
-            </a>
+                <a href="crudProductos.jsp"><input type="button" value="Ingresar un Servicio de Reparacion"/></a>
+                <br>
+                <br>
+                <a href="Listar.jsp"><input type="button" value="Ver los Servicio de Reparacion Registrados"/></a>
         </menu>
-    
+        <br>
+        
         <% if(request.getParameter("msj")!= null){%>
         <h3><%= request.getParameter("msj") %></h3>
         <%}%>
         
-        <% if(request.getParameter("msj")!= null){%>
-        <h4><%= request.getParameter("msj") %></h4>
-        <%}%>
       </center>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

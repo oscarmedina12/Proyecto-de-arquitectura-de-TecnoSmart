@@ -11,9 +11,10 @@
         <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
         <title>TecnoSmart</title>
     </head>
-    <body>
+    <body class="Body">
     <center>
         <h1>Ingreso de Reparacion</h1>
+        <div class="container col-lg-3">
         <form action="ControladorProducto" method="post">
             <table>
                 <tr>
@@ -71,6 +72,7 @@
                 </tr>
             </table>
         </form>
+        </div>
                         <% if(request.getParameter("msj")!= null){%>
         <h4><%= request.getParameter("msj") %></h4>
         <%}%>

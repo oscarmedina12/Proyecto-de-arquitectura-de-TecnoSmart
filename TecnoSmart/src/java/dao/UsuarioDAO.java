@@ -83,12 +83,12 @@ public class UsuarioDAO extends Conexion {
             desconectar();
         }
     }
-    public Usuario obtenerUsuario(String id) throws ClassNotFoundException, SQLException{
+    public Usuario obtenerUsuario(Usuario usuario) throws ClassNotFoundException, SQLException{
         String sentencia = "select * from usuario where id = ?";
         try{
         Conexion();
         PreparedStatement ps= obtenerPS(sentencia);
-        ps.setString(1, id);
+        ps.setString(1, usuario.getId());
         ResultSet rs = ps.executeQuery();
         Usuario u = null;
         if(rs.next()){

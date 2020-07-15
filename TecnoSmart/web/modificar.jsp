@@ -1,9 +1,12 @@
+<%-- 
+    Document   : modificar
+    Created on : 15-jul-2020, 0:57:28
+    Author     : DellPC
+--%>
 
-<%@page import="dao.EstadoDAO"%>
-<%@page import="modelos.Estado"%>
-<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -13,13 +16,13 @@
     </head>
     <body class="Body">
     <center>
-        <h1>Ingreso de Reparacion</h1>
+        <h1>Panel de Modificacion </h1>
         <div class="container col-lg-3">
         <form action="ControladorProducto" method="post">
             <table>
                 <tr>
                     <td>Codigo de Cliente</td>
-                    <td><input type="number" name="codigo"/></td>
+                    <td><input type="number" name="codigo" value=""/></td>
                 </tr>
                 <tr>
                     <td>Tipo de Producto</td>
@@ -58,16 +61,13 @@
                     <td>
                         <select name="estado">
                             <option value="0">Seleccione</option>
-                            <% ArrayList<Estado> estados = new EstadoDAO().obtenerEstados(); 
-                            for(Estado e:estados){%>
-                            <option value="<%= e.getId() %>"><%= e %></option>
-                            <% } %>
+                            <option value="1">En Reparacion</option>
+                         
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td><input type="reset" value="Limpiar"/></td>
-                    <td><input type="submit" value="Registrar"/></td>
+                    <td><input type="submit" value="Modificar"/></td>
                 <input type="hidden" name="accion" value="1"/>
                 </tr>
             </table>

@@ -30,6 +30,7 @@ public class ProductoDAO extends Conexion {
             ps.setString(7, producto.getEmailCliente());
             ps.setString(8, producto.getRutCliente());
             ps.setString(9, producto.getTelefonoCliente());
+            //pasar fecha de registro
             ps.setInt(10, producto.getEstado().getId());
             return ps.executeUpdate();
         }catch(Exception e){
@@ -66,6 +67,7 @@ public class ProductoDAO extends Conexion {
                 p = new Producto(rs.getLong("codigo"),rs.getString("tipoProducto"),rs.getString("modeloProducto"),rs.getString("descripcionProblema"),
                         rs.getInt("precio"),rs.getString("nombreCliente"),rs.getString("emailCliente"),rs.getString("rutCliente"),rs.getString("telefonoCliente"),e);
             }
+            
             return p;
         }catch(Exception e){
             return null;

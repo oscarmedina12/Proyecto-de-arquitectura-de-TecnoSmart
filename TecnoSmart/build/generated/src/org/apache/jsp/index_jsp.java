@@ -53,51 +53,25 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>Login</title>\n");
       out.write("    </head>\n");
       out.write("    <body class=\"Body\">\n");
+      out.write("        <div class=\"container col-lg-3\">\n");
+      out.write("            <div class=\"form-group text-center\">\n");
+      out.write("                <h2>INICIO DE SESIÓN TECNOSMART</strong></h2>\n");
+      out.write("                </div>\n");
       out.write("        <center>\n");
-      out.write("        <h1>Inicio de Sesion</h1>\n");
-      out.write("        ");
-  Cookie[] cookies = request.getCookies();
-        String saludo ="";
-        String id = "";
-        String pass ="";
-        for(int i=0; i<cookies.length; i++)
-        {
-        Cookie cookieActual = cookies[i];
-        if(cookieActual.getName().equals("nombre"))
-        {
-        saludo += "Bienvenido "+cookieActual.getValue();
-        }
-        if(cookieActual.getName().equals("id")){
-            id = cookieActual.getValue();
-        }
-        if(cookieActual.getName().equals("pass")){
-            pass = cookieActual.getValue();
-        }
-            
-        }
-        
-      out.write("\n");
-      out.write("        <h3>");
-      out.print( saludo );
-      out.write("</h3>\n");
+      out.write("       \n");
+      out.write("        <h3></h3>\n");
       out.write("        <form action=\"ControladorUsuario\" method=\"post\">\n");
       out.write("        <table>\n");
       out.write("            <tr>\n");
       out.write("                <td>ID Usuario</td>\n");
-      out.write("                <td><input type=\"text\" name=\"id\" value=\"");
-      out.print( id );
-      out.write("\"/></td>\n");
+      out.write("                <td><input type=\"text\" name=\"id\" value=\"\"/></td>\n");
       out.write("            </tr>\n");
       out.write("            <tr>\n");
       out.write("                <td>Contraseña</td>\n");
-      out.write("                <td><input type=\"password\" name=\"password\" value=\"");
-      out.print( pass );
-      out.write("\"/></td>\n");
+      out.write("                <td><input type=\"password\" name=\"password\" value=\"\"/></td>\n");
       out.write("            </tr>\n");
       out.write("            <tr>\n");
       out.write("                <td><input type=\"submit\" value=\"Iniciar Sesion\"/></td>\n");
-      out.write("                <td><a href=\"registro.jsp\">\n");
-      out.write("                        <input type=\"button\" value=\"Registrar\"/>\n");
       out.write("                    </a>\n");
       out.write("                </td>\n");
       out.write("            </tr>\n");
@@ -114,6 +88,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        </form>\n");
       out.write("        </center>\n");
+      out.write("        </div>\n");
       out.write("        <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n");
       out.write("<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>\n");
       out.write("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>\n");

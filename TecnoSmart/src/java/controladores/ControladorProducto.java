@@ -56,25 +56,29 @@ public class ControladorProducto extends HttpServlet {
             String emailCliente = request.getParameter("emailCliente").trim();
             String rutCliente = request.getParameter("rutCliente").trim();
             String telefonoCliente = request.getParameter("telefonoCliente").trim();
-            int estado =Integer.parseInt( request.getParameter("estado").trim());
+            int estado = Integer.parseInt( request.getParameter("estado").trim());
             if(codigo<1||tipoProducto.equals("")||modeloProducto.equals("")||descripcionProblema.equals("")||precio<1||
                     nombreCliente.equals("")||emailCliente.equals("")||rutCliente.equals("")||telefonoCliente.equals("")||
-                    estado<1){
+                    estado<1) // que hace aqui 
+            {
                 response.sendRedirect("crudProductos.jsp?msj=datos incorrectos");
             }else{
                 EstadoDAO ed = new EstadoDAO();
+                //crea nueva variable, pregunta
                 Producto nuevoProducto = new Producto (codigo,tipoProducto,modeloProducto,descripcionProblema,
                         precio,nombreCliente,emailCliente,rutCliente,telefonoCliente,ed.obtenerEstado(estado));
+                
                 ProductoDAO pd = new ProductoDAO();
+                
                 if(pd.obtenerProducto(nuevoProducto.getCodigo())==null){
                     int respuesta = pd.registrar(nuevoProducto);
                     if(respuesta==1){
                     response.sendRedirect("crudProductos.jsp?msj=Reparacion registrada");
                     }else{
-                    response.sendRedirect("crudProductos.jsp?msj=La reparacion no se pudo ingresar");
+                    response.sendRedirect("crudProductos.jsp?msj=La reparacion no se pudo ingresar"); // For input String: ""
                     }
                 }else{
-                    response.sendRedirect("crudProductos.jsp?msj=...");
+                    response.sendRedirect("crudProductos.jsp?msj=El Codigo ya existe");
                 }
             }
            }catch(Exception e){
