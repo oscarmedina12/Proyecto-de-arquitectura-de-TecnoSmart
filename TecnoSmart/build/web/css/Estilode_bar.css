@@ -1,0 +1,71 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 15-jul-2020, 22:36:14
+    Author     : oscar medina
+*/
+
+/*barra de menu de tecnosmart*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: red;
+ 
+}
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+/*fin*/
+/*inicio de la tabla 
+*/
+table {
+  border-collapse: initial;
+  border: none;
+  width: 50%;
+  border: 1px solid ;
+  
+}
+
+th, td {
+  text-align: left;
+  background:#ffffff ;
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/*fin*/
+/*inicios de botones*/
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+}
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+.success {background-color: #4CAF50;} /* Green */
+.success:hover {background-color: #46a049;}
+/*fin*/

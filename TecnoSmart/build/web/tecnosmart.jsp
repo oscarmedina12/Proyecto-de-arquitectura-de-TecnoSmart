@@ -9,11 +9,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+        <%--<link href="css/estilos.css" rel="stylesheet" type="text/css"/>--%>
+        <link href="css/Estilode_bar.css" rel="stylesheet" type="text/css"/>
         <title>TecnoSmart</title>
     </head>
     <body class="Body">
+        <div class="navbar">
+  <a href="index.jsp">Salir session</a>
+  <a href="crudProductos.jsp">Ingresar un servicio</a>
+ 
+  </div> 
+</div>
     <center>
+        
         <h1>Bienvenido
             <% if(session.getAttribute("usuario")!= null){
              Usuario u = (Usuario) session.getAttribute("usuario");
@@ -21,14 +29,39 @@
         <h3><%= u.getNombre()+" "+u.getApellido() %></h3>
         <%}else{response.sendRedirect("index.jsp?msj=acceso denegado");}%>
        
+        <h2>Detalledes de servicios</h2> 
+ <table>
+  <tr>
+    <th>Codigo de cliente</th>
+    <th>Nombre</th>
+    <th>Estado</th>
+    <th>  modificar   </th>
+  </tr>
+  <tr>
+    <td>03</td>
+    <td>Smith</td>
+    <td>arreglado</td>
+    <td> 
+    <input type="submit" class="btn success" value="Editar"/>
+       <input type="submit" class="btn info" value="Eliminar"/>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>Jackson</td>
+    <td>cambio de pantalla</td>
+     <td> <input type="submit" class="btn success" value="Editar"/>
+       <input type="submit" class="btn info" value="Eliminar"/>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>Johnson</td>
+    <td>arreglado</td>
+    <td> <input type="submit" class="btn success" value="Editar"/>
+       <input type="submit" class="btn info" value="Eliminar"/>
+  </tr>
+</table>
        
-        <menu >
-                <a href="crudProductos.jsp"><input type="button" value="Ingresar un Servicio de Reparacion"/></a>
-                <br>
-                <br>
-                <a href="Listar.jsp"><input type="button" value="Ver los Servicio de Reparacion Registrados"/></a>
-        </menu>
-        <br>
+  
         
         <% if(request.getParameter("msj")!= null){%>
         <h3><%= request.getParameter("msj") %></h3>
