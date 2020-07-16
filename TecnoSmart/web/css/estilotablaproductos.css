@@ -1,0 +1,53 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-jul-2020, 18:14:45
+    Author     : Raul
+*/
+.direccion
+{
+    background-color: brown;
+    border-radius: 10px;
+    padding: 10px;
+    border-collapse: initial;
+    border: none;
+    width: 55%;
+    border: 1px solid;
+    float:right;
+    text-align: right;
+}
+.fondo
+{
+    background:red;
+}
+.otrolado
+{
+    position: left;
+    text-align: left;
+    background-color: #46a049;
+    border-radius: 20px;
+    float: left; 
+    border-radius: 10px;
+    padding: 5px;
+    border-collapse: initial;
+    border: none;
+    width: 20%;
+    border: 1px solid;
+}
+.centrado
+{
+    position: center;
+    text-align: center;
+    background-color: #46a049;
+    border-radius: 20px; 
+    border-radius: 10px;
+    padding: 5px;
+    border-collapse: initial;
+    border: none;
+    width: 20%;
+    border: 1px solid;
+    float:left;
+}
