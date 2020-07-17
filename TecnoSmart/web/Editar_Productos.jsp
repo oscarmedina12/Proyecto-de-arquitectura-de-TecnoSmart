@@ -26,7 +26,7 @@
   <a href="tecnosmart.jsp">Detalle de servicios</a>
  
   </div> 
-        <h1>Ingreso de Reparacion</h1>
+        <h1>Editar de Reparacion</h1>
         <center> <div class="container">
                 <table><td>
                 <h2>Datos Clientes</h2>
