@@ -1,3 +1,9 @@
+<%-- 
+    Document   : Editar_Productos
+    Created on : 16-jul-2020, 22:32:40
+    Author     : oscar medina
+--%>
+
 
 <%@page import="dao.EstadoDAO"%>
 <%@page import="modelos.Estado"%>
@@ -65,7 +71,7 @@
                     </td></table>
 <table>
   <td><input type="reset" value="Limpiar"/>
-   <input type="submit" value="Registrar"/>
+   <input type="submit" value="Guardar"/>
    <input type="hidden" name="accion" value="1"/></td></table>
  
   </form>

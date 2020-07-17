@@ -42,7 +42,7 @@
     <td>Smith</td>
     <td>arreglado</td>
     <td> 
-    <input type="submit" class="btn success" value="Editar"/>
+   <a href="Editar_Productos.jsp" class="btn success">Editar</a>
        <input type="submit" class="btn info" value="Eliminar"/>
   </tr>
   <tr>
