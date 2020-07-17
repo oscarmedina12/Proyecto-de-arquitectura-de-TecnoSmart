@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelos.Producto;
-
+import java.util.Scanner;
 /**
  *
  * @author DellPC
@@ -85,6 +85,87 @@ public class ControladorProducto extends HttpServlet {
                response.sendRedirect("crudProductos.jsp?msj="+e.getMessage());
            }
         }
+    
+    public class validacionrut {
+    private int run;
+    private char dv;
+    
+    public validacionrut()
+    {}
+    
+    public validacionrut(int run, char dv)
+    {
+        this.setRun(run);
+        this.setDv(dv);
+    }
+
+    /**
+     * @return the run
+     */
+    public int getRun() {
+        return run;
+    }
+
+    /**
+     * @param run the run to set
+     */
+    public void setRun(int run) {
+        try {
+            if(run>=1 && run<99999999){
+                System.out.println("run guardado.");
+                this.run =run;
+            }else{
+                System.out.println("ERROR: run no valido");
+                System.out.println("ingrese un rut valido");
+                Scanner leerRun = new Scanner(System.in);
+                int nuevoRun = leerRun.nextInt();
+               
+                if(nuevoRun>=1 && nuevoRun<=99999999){
+                    System.out.println("rut guardado");
+                    this.run = nuevoRun;
+                }else{
+                    this.setRun(run);
+                }       
+            }
+        } catch (Exception e) {
+            System.out.println("Error no identificado");
+        }
+    }
+
+    /**
+     * @return the dv
+     */
+    public char getDv() {
+        return dv;
+    }
+
+    /**
+     * @param dv the dv to set
+     */
+    public void setDv(char dv) {
+        try {
+            if(dv=='0'|| dv=='1'|| dv=='2' || dv=='3' || dv=='4' || dv=='5' || dv=='6' || dv=='7' || dv=='8'|| dv=='9'|| dv=='k' || dv=='K'){
+                System.out.println("DV guardado.");
+                this.dv = dv;
+            }else{
+                System.out.println("ERROR: DV no valido");
+                System.out.println("ingrese DV valido");
+                Scanner LeerDV = new Scanner (System.in);
+                char nuevoDV = LeerDV.nextLine().charAt(0);
+                if(nuevoDV=='0'  || nuevoDV=='1' || nuevoDV=='2' || nuevoDV=='3' || nuevoDV=='4' || nuevoDV=='5' || nuevoDV=='6' ||
+                   nuevoDV=='7'  || nuevoDV=='8' || nuevoDV=='9' || nuevoDV=='k' || nuevoDV=='K'){
+                    System.out.println("DV guardado");
+                    this.dv = nuevoDV;
+                }else{
+                    this.setDv(dv);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("ERROR! error no entendido.");
+        }
+    }
+}
+
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
