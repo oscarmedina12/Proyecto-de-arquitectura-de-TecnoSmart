@@ -39,7 +39,7 @@
   </tr>
   <tr>
     <td>03</td>
-    <td>Smith</td>
+    <td>Raul</td>
     <td>arreglado</td>
     <td> 
    <a href="Editar_Productos.jsp" class="btn success">Editar</a>
@@ -47,14 +47,14 @@
   </tr>
   <tr>
     <td>25</td>
-    <td>Jackson</td>
+    <td>jose</td>
     <td>cambio de pantalla</td>
      <td> <input type="submit" class="btn success" value="Editar"/>
        <input type="submit" class="btn info" value="Eliminar"/>
   </tr>
   <tr>
     <td>01</td>
-    <td>Johnson</td>
+    <td>nicolas</td>
     <td>arreglado</td>
     <td> <input type="submit" class="btn success" value="Editar"/>
        <input type="submit" class="btn info" value="Eliminar"/>

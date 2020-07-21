@@ -59,7 +59,7 @@ public class ControladorProducto extends HttpServlet {
             int estado = Integer.parseInt( request.getParameter("estado").trim());
             if(codigo<1||tipoProducto.equals("")||modeloProducto.equals("")||descripcionProblema.equals("")||precio<1||
                     nombreCliente.equals("")||emailCliente.equals("")||rutCliente.equals("")||telefonoCliente.equals("")||
-                    estado<1) // que hace aqui 
+                    estado < 0) // que hace aqui 
             {
                 response.sendRedirect("crudProductos.jsp?msj=datos incorrectos");
             }else{
