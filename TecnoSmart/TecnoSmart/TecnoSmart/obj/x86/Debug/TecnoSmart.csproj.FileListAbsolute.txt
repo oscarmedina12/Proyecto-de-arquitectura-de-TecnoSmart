@@ -1,0 +1,12 @@
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.Login.resources
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.Properties.Resources.resources
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.csproj.GenerateResource.Cache
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\bin\Debug\TecnoSmart.exe
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\bin\Debug\TecnoSmart.pdb
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.exe
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.pdb
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.ActualizarTecnoSmart.resources
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.IngresoTecnoSmart.resources
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.ListarTecnoSmart.resources
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.csprojResolveAssemblyReference.cache
+C:\Users\DellPC\Desktop\TecnoSmart\TecnoSmart\TecnoSmart\obj\x86\Debug\TecnoSmart.Menu.resources

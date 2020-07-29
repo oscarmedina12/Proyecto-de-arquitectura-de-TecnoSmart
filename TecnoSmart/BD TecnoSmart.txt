@@ -1,0 +1,48 @@
+CREATE TABLE pro_producto
+(
+	pro_id INT IDENTITY(1,1) PRIMARY KEY,
+	pro_nombre VARCHAR(255)	
+)
+--------------------------------------
+CREATE TABLE rep_reparacion
+(
+	rep_id INT IDENTITY(1,1) PRIMARY KEY,
+	rep_nombre VARCHAR(255),
+	rep_pro_id INT NOT NULL FOREIGN KEY (rep_pro_id) REFERENCES pro_producto (pro_id) 
+)
+--------------------------------------
+CREATE TABLE cli_cliente
+(
+	cli_id INT IDENTITY(1,1) PRIMARY KEY,
+	cli_detalleProblema VARCHAR(255),
+	cli_nombreCliente VARCHAR(255),
+	cli_apellidoCliente VARCHAR(255),
+	cli_direccionCliente VARCHAR(255),
+	cli_emailCliente VARCHAR(255),
+	cli_telefonoCliente VARCHAR(255),
+	cli_rep_id INT NOT NULL FOREIGN KEY (cli_rep_id) REFERENCES rep_reparacion (rep_id)	
+)
+----------------------------------------
+CREATE PROCEDURE Listar_Prodcuto
+AS
+BEGIN
+	SELECT
+	pro_id AS id,
+	pro_nombre AS nombre
+	FROM
+	pro_producto
+END
+----------------------------------------
+CREATE PROCEDURE Listar_Reparacion_Pro
+@pro_id INT
+AS
+BEGIN
+	SELECT
+	rep_id AS id,
+	rep_nombre AS nombre
+	FROM
+	rep_reparacion
+	WHERE
+	rep_pro_id = @pro_id
+END
+----------------------------------------
